@@ -1,11 +1,11 @@
 package com.company;
-import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
         triangle();
         whoAreU(4);
-        whoIsSmall(7,-8,0);
+        whoIsSmall(-5,-77,-77);
     }
     //
     static void triangle(){
@@ -19,15 +19,15 @@ public class Main {
     //
     static void whoAreU(int check){
         if (check % 2 == 0){
-            System.out.println("Четное");
+            System.out.println(check + "-Четное");
         }else {
-            System.out.println("Не четное");
+            System.out.println(check + "-Не четное");
         }
     }
     //
     static void whoIsSmall(int first, int second, int third){
         int copycats=0;
-        if (first<=second&&first<=third){
+        if (first<=second&&first<=third){  //<= для защиты от одинаковых чисел
             copycats=first;
         }else if (second<=first&&second<=third){
             copycats=second;
