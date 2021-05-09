@@ -22,7 +22,6 @@ public class Task1 {
         }
         return result = sum / arephmeticArray.length;
     }
-
     public static double middleGeometric(int[] numbers) {
         int geometricArray = numbers.length;
         double multi = 0.0d;
