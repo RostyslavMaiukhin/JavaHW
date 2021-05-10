@@ -15,8 +15,7 @@ public class Task3 {
     public static int compositedNumber(int[] numbers) {
         int counter = 0;
         int counterCompos = 0;
-        int[] workArray = Arrays.copyOf(numbers, numbers.length);
-        for (int k : workArray) {
+        for (int k : numbers) {
             for (int j = 2; j < k; j++) {
                 if (k % j == 0) {
                     counter++;

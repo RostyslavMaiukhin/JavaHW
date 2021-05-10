@@ -14,13 +14,12 @@ public class Task1 {
     }
 
     public static int middleArithmetic(int[] numbers) {
-        int[] arithmeticArray = Arrays.copyOf(numbers, numbers.length);
         int sum = 0;
         int result = 0;
-        for (int j : arithmeticArray) {
+        for (int j : numbers) {
             sum += j;
         }
-        return result = sum / arithmeticArray.length;
+        return result = sum / numbers.length;
     }
     public static double middleGeometric(int[] numbers) {
         int geometricArray = numbers.length;
