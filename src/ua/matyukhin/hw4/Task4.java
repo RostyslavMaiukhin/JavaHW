@@ -9,10 +9,10 @@ public class Task4 {
             numbers[i] = (int) (Math.random() * (1 - 10) + 10);
         }
         System.out.println("Исходный массив: " + Arrays.toString(numbers));
-        System.out.println("Замена четных:  " + Arrays.toString(isEven(numbers)));
+        System.out.println("Замена четных:  " + Arrays.toString(evenToZero(numbers)));
     }
 
-    public static int[] isEven(int[] numbers) {
+    public static int[] evenToZero(int[] numbers) {
         int[] workArray = Arrays.copyOf(numbers, numbers.length);
         for (int i = 0; i < workArray.length; i++) {
             if (workArray[i] % 2 == 0) {
