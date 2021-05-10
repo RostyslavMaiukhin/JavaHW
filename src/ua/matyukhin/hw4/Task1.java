@@ -24,10 +24,10 @@ public class Task1 {
     }
     public static double middleGeometric(int[] numbers) {
         int geometricArray = numbers.length;
-        double multi = 0.0d;
+        double multi = 0;
         for (int number : numbers) {
-            if (number == 0L) {
-                return 0.0d;
+            if (number == 0) {
+                return 0;
             }
             multi += Math.log(number);
         }
