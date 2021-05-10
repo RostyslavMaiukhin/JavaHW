@@ -15,8 +15,7 @@ public class Task2 {
     public static int primeNumbers(int[] numbers) {
         int counter = 0;
         int counterPrime = 0;
-        int[] workArray = Arrays.copyOf(numbers, numbers.length);
-        for (int k : workArray) {
+        for (int k : numbers) {
             for (int j = 1; j < k; j++) {
                 if (k % j == 0) {
                     counter++;

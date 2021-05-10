@@ -13,7 +13,7 @@ public class Task4 {
     }
 
     public static int[] evenToZero(int[] numbers) {
-        int[] workArray = Arrays.copyOf(numbers, numbers.length);
+        int[] workArray = Arrays.copyOf(numbers, numbers.length); //Сохраняем оригинальный array на всякий
         for (int i = 0; i < workArray.length; i++) {
             if (workArray[i] % 2 == 0) {
                 workArray[i] = 0;
