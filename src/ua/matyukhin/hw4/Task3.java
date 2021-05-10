@@ -8,8 +8,7 @@ public class Task3 {
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = (int) (Math.random() * (1 - 100) + 100);
         }
-        System.out.println("Исходный массив " + Arrays.toString(numbers));
-
+        System.out.println("Исходный массив: " + Arrays.toString(numbers));
         System.out.println("Составных чисел: " + compositedNumber(numbers));
     }
 
@@ -24,7 +23,6 @@ public class Task3 {
                 }
             }
             if (counter >= 1) {
-                System.out.println(k);
                 counterSimple++;
             }
             counter = 0;
