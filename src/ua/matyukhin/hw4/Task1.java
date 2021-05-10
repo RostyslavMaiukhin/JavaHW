@@ -9,11 +9,11 @@ public class Task1 {
             numbers[i] = (int) (Math.random() * (1 - 100) + 100); //с 0 геометрическое считать скучно
         }
         System.out.println("Исходный массив " + Arrays.toString(numbers));
-        System.out.println("Среднее Арифметическое " + middleAriphmetic(numbers));
+        System.out.println("Среднее Арифметическое " + middleArithmetic(numbers));
         System.out.println("Среднее Геометрическое " + middleGeometric(numbers));
     }
 
-    public static int middleAriphmetic(int[] numbers) {
+    public static int middleArithmetic(int[] numbers) {
         int[] arithmeticArray = Arrays.copyOf(numbers, numbers.length);
         int sum = 0;
         int result = 0;
