@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Task4 {
     public static void main(String[] args) {
-        int[] numbers = new int[10];
+        int[] numbers = new int[2000];
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = (int) (Math.random() * (1 - 10) + 10);
         }
