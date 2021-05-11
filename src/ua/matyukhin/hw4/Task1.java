@@ -24,7 +24,6 @@ public class Task1 {
     public static double middleGeometric(int[] numbers) {
         int geometricArray = numbers.length;
         double multi = 0;
-        int number=0;
         for (int j : numbers) {
             if (j == 0) {
                 return 0;
