@@ -10,12 +10,12 @@ public class Task1 {
         System.out.println(Arrays.deepToString(numbers).replace("], ", "]\n"));
     }
 
-    public static void fillArray(int[][] numbers) {
+    private static void fillArray(int[][] numbers) {
         int counter = 0;
         for (int i = 0; i < numbers.length; i++) {
             for (int j = 0; j < numbers[i].length; j++) {
                 numbers[i][j] = counter;
-                if (i!=0){
+                if (i%2!=0) {
                     numbers[i][j] = -counter;
                 }
                 counter++;
