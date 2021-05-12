@@ -6,10 +6,10 @@ public class Task4 {
     public static void main(String[] args) {
         int[] numbers = new int[2000];
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = (int) (Math.random() * (1 - 10) + 10);
+            numbers[i] = (int) (Math.random() * (1 - 100) + 100);
         }
         System.out.println("Исходный массив: " + Arrays.toString(numbers));
-        System.out.println("Замена четных:  " + Arrays.toString(evenToZero(numbers)));
+        System.out.println("Замена четных:   " + Arrays.toString(evenToZero(numbers)));
     }
 
     public static int[] evenToZero(int[] numbers) {
