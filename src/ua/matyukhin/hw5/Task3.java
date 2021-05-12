@@ -1,6 +1,7 @@
 package ua.matyukhin.hw5;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Task3 {
     public static void main(String[] args) {
@@ -11,7 +12,7 @@ public class Task3 {
         System.out.println(Arrays.deepToString(arraySwap(numbers)).replace("], ", "]\n"));
     }
 
-    public static int[][] arraySwap(int[][] numbers) {
+    private static int[][] arraySwap(int[][] numbers) {
         int temp = 0;
         int[][] workArray = Arrays.copyOf(numbers, numbers.length);
         for (int j = 0; j < numbers.length; j++) {
