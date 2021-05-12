@@ -11,7 +11,7 @@ public class Task2 {
         System.out.println(checkNonIncrease(numbers));
     }
 
-    public static boolean checkNonIncrease(int[] numbers) {
+    private static boolean checkNonIncrease(int[] numbers) {
         int counter = 0;
         for (int i = 1; i < numbers.length; i++) {
             if (numbers[i] <= numbers[i - 1]) {
@@ -21,7 +21,7 @@ public class Task2 {
         return counter == numbers.length - 1;
     }
 
-    public static void fillArray(int[] numbers) {
+    private static void fillArray(int[] numbers) {
         Random random = new Random();
         for (int i = 0; i < numbers.length; i++) {
             int randomLength = random.nextInt(10);
