@@ -5,10 +5,11 @@ import java.util.Arrays;
 public class Task1 {
     public static void main(String[] args) {
         int[][] numbers = new int[5][5];
-        System.out.println(Arrays.deepToString(fillArrayDiversity(numbers)).replace("], ", "]\n"));
+        fillArrayDiversity(numbers);
+        System.out.println(Arrays.deepToString(numbers).replace("], ", "]\n"));
     }
 
-    private static int[][] fillArrayDiversity(int[][] numbers) {
+    private static void fillArrayDiversity(int[][] numbers) {
         int counter = 0;
         for (int i = 0; i < numbers.length; i++) {
             for (int j = 0; j < numbers[i].length; j++) {
@@ -16,6 +17,5 @@ public class Task1 {
                 counter++;
             }
         }
-        return numbers;
     }
 }
