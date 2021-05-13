@@ -2,7 +2,6 @@ package ua.matyukhin.hw5;
 
 import java.util.Arrays;
 
-
 public class Task1 {
     public static void main(String[] args) {
         int[][] numbers = new int[5][5];
@@ -14,10 +13,7 @@ public class Task1 {
         int counter = 0;
         for (int i = 0; i < numbers.length; i++) {
             for (int j = 0; j < numbers[i].length; j++) {
-                numbers[i][j] = counter;
-                if (i%2!=0) {
-                    numbers[i][j] = -counter;
-                }
+                numbers[i][j] = (i % 2 != 0) ? -counter : counter;
                 counter++;
             }
         }
