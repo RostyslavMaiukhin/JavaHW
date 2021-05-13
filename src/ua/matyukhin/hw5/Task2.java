@@ -14,7 +14,7 @@ public class Task2 {
     private static boolean checkNonIncrease(int[] numbers) {
         int counter = 0;
         for (int i = 1; i < numbers.length; i++) {
-            if (numbers[i] <= numbers[i - 1]) {
+            if (numbers[i] <= numbers[i - 1]) { //<= По условию - Не больше
                 counter++;
             }
         }
