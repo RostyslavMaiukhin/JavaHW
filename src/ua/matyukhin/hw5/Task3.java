@@ -15,12 +15,12 @@ public class Task3 {
     private static int[][] arraySwap(int[][] numbers) {
         int temp = 0;
         int[][] workArray = Arrays.copyOf(numbers, numbers.length);
-        for (int j = 0; j < numbers.length; j++) {
-            for (int i = 1; i < workArray.length; i++) {
-                if (i >= j) {
-                    temp = workArray[j][i];
-                    workArray[j][i] = workArray[i][j];
-                    workArray[i][j] = temp;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 1; j < workArray.length; j++) {
+                if (j >= i) {
+                    temp = workArray[i][j];
+                    workArray[i][j] = workArray[j][i];
+                    workArray[j][i] = temp;
                 }
             }
         }
