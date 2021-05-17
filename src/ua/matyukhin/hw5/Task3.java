@@ -7,14 +7,23 @@ public class Task3 {
     public static void main(String[] args) {
         int[][] numbers = new int[10][10];
         fillArray(numbers);
+//        System.out.println(Arrays.deepToString(numbers).replace("], ", "]\n"));
+//        System.out.println(" ");
+//        System.out.println(Arrays.deepToString(arraySwap(numbers)).replace("], ", "]\n"));
+//        System.out.println(" ");
+//        System.out.println(" ");
+//        System.out.println(" ");
         System.out.println(Arrays.deepToString(numbers).replace("], ", "]\n"));
         System.out.println(" ");
         System.out.println(Arrays.deepToString(arraySwap(numbers)).replace("], ", "]\n"));
+        System.out.println(" ");
+        System.out.println(Arrays.deepToString(numbers).replace("], ", "]\n"));
     }
 
     private static int[][] arraySwap(int[][] numbers) {
         int temp = 0;
-        int[][] workArray = Arrays.copyOf(numbers, numbers.length);
+        int[][] workArray = new int[numbers.length][numbers.length];
+        fillArray(workArray);
         for (int i = 0; i < numbers.length; i++) {
             for (int j = 1; j < workArray.length; j++) {
                 if (j >= i) {

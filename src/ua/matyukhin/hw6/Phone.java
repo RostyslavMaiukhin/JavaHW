@@ -13,17 +13,17 @@ public class Phone {    //а)
         return this.number;
     }
 
-    void Phone(String number, String model, int weight) {       //е)
+    Phone(String number, String model, int weight) {       //е)
         this.number = number;
         this.model = model;
         this.weight = weight;
     }
 
-    void Phone(String number, String model) {       //ж)
+    Phone(String number, String model) {       //ж)
         this.number = number;
         this.model = model;
     }
 
-    void Phone() {      //з)
+    Phone() {      //з)
     }
 }

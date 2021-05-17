@@ -2,7 +2,6 @@ package ua.matyukhin.hw6;
 
 public class Task1 {
     public static void main(String[] args) {
-
         Phone phone1 = new Phone();     //б)
         phone1.number = "0667777777";   //в)
         phone1.model = "K750i";         //в)
@@ -44,8 +43,7 @@ public class Task1 {
         phone3.receiveCall("Катя");      //д)
         System.out.println(phone3.getNumber());//д)
         System.out.println(" ");
-
-
+        
     }
 
 }
