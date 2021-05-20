@@ -9,11 +9,10 @@ public class Aspirant extends Student {
     }
 
     @Override
-    public int getScholarship(Student aveMark) {
-        if (aveMark.averageMark == 5) {
+    public int getScholarship() {
+        if (averageMark == 5) {
             return 200;
         }
         return 180;
     }
-
 }

@@ -7,8 +7,8 @@ public class Task2 {
         Student[] students = new Student[2];
         students[0] = student;
         students[1] = aspirant;
-        for (Student sendParam : students) {
-            System.out.println(sendParam.getScholarship(sendParam));
+        for (Student human : students) {
+            System.out.println(human.firstName + " получает " + human.getScholarship());
         }
     }
 }
