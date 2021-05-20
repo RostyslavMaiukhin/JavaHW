@@ -13,8 +13,8 @@ public class Student {
         this.averageMark = averageMark;
     }
 
-    public int getScholarship(Student aveMark) {
-        if (aveMark.averageMark == 5) {
+    public int getScholarship() {
+        if (averageMark == 5) {
             return 100;
         }
         return 80;
