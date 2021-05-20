@@ -1,4 +1,4 @@
-package ua.matyukhin.hw7;
+package ua.matyukhin.hw7.Task2;
 
 public class Task2 {
     public static void main(String[] args) {
@@ -10,7 +10,5 @@ public class Task2 {
         for (Student sendParam : students) {
             System.out.println(sendParam.getScholarship(sendParam));
         }
-
     }
-
 }

@@ -1,4 +1,4 @@
-package ua.matyukhin.hw7;
+package ua.matyukhin.hw7.Task2;
 
 public class Aspirant extends Student {
     String ownWork;
