@@ -1,7 +1,5 @@
 package ua.matyukhin.hw6;
 
-import ua.matyukhin.hw7.Task2.Student;
-
 public class Task1 {
     public static void main(String[] args) {
         Phone phone1 = new Phone();     //б)
