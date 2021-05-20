@@ -17,10 +17,8 @@ public class Task3 {
         methods[2] = vectorSub;
         methods[3] = vector3d;
         for (Vector3d vector : methods) {
-            System.out.print(vector.x + " " + vector.y + " " + vector.z);
-            System.out.println();
+            System.out.println(vector.x + " " + vector.y + " " + vector.z);
         }
-
         System.out.println(Arrays.deepToString((Vector3d.randomVector(6))));
     }
 }
