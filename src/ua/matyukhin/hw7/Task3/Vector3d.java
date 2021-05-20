@@ -43,7 +43,7 @@ public class Vector3d {
         return new Vector3d(x2, y2, z2);
     }
 
-    public int[][] randomVector(int n) {
+    public static int[][] randomVector(int n) {
         Random random = new Random();
         int[][] randomVec = new int[n][3];
         for (int i = 0; i < randomVec.length; i++) {
@@ -53,10 +53,4 @@ public class Vector3d {
         }
         return randomVec;
     }
-
-    public void describeYourself(Vector3d vec) {
-        System.out.print(vec.x + " " + vec.y + " " + vec.z);
-        System.out.println();
-    }
-
 }
