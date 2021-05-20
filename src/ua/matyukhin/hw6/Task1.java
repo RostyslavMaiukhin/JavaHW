@@ -26,7 +26,6 @@ public class Task1 {
         for (Phone catalog : phones) {
             System.out.println(catalog.number + " " + catalog.model + " " + catalog.weight);
         }
-
         phone1.receiveCall("Петя");      //д)
         System.out.println(phone1.getNumber());//д)
 
