@@ -1,5 +1,7 @@
 package ua.matyukhin.hw6;
 
+import ua.matyukhin.hw7.Task2.Student;
+
 public class Task1 {
     public static void main(String[] args) {
         Phone phone1 = new Phone();     //б)
@@ -17,33 +19,21 @@ public class Task1 {
         phone3.model = "P900";          //в)
         phone3.weight = 300;            //в)
 
-        System.out.println(phone1.number);//г)
-        System.out.println(phone1.model); //г)
-        System.out.println(phone1.weight);//г)
-        System.out.println(" ");
-
-        System.out.println(phone2.number);//г)
-        System.out.println(phone2.model); //г)
-        System.out.println(phone2.weight);//г)
-        System.out.println(" ");
-
-        System.out.println(phone3.number);//г)
-        System.out.println(phone3.model); //г)
-        System.out.println(phone3.weight);//г)
-        System.out.println(" ");
+        Phone[] phones = new Phone[3];  //г)
+        phones[0] = phone1;
+        phones[1] = phone2;
+        phones[2] = phone3;
+        for (Phone catalog : phones) {
+            System.out.println(catalog.number + " " + catalog.model + " " + catalog.weight);
+        }
 
         phone1.receiveCall("Петя");      //д)
         System.out.println(phone1.getNumber());//д)
-        System.out.println(" ");
 
         phone2.receiveCall("Вася");      //д)
         System.out.println(phone2.getNumber());//д)
-        System.out.println(" ");
 
         phone3.receiveCall("Катя");      //д)
         System.out.println(phone3.getNumber());//д)
-        System.out.println(" ");
-        
     }
-
 }
