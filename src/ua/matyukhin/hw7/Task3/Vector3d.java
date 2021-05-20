@@ -1,4 +1,4 @@
-package ua.matyukhin.hw7;
+package ua.matyukhin.hw7.Task3;
 
 import java.util.Random;
 
