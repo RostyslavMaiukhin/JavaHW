@@ -19,4 +19,5 @@ public class Student {
         }
         return 80;
     }
+    Student(){}
 }

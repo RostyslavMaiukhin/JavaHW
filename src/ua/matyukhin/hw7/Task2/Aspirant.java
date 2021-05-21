@@ -15,4 +15,5 @@ public class Aspirant extends Student {
         }
         return 180;
     }
+    Aspirant(){}
 }
