@@ -53,4 +53,5 @@ public class Vector3d {
         }
         return randomVec;
     }
+    Vector3d(){}
 }
