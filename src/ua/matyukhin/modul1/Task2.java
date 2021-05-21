@@ -1,5 +1,6 @@
 package ua.matyukhin.modul1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task2 {
@@ -37,9 +38,10 @@ public class Task2 {
             System.out.println("Лимит не больше 77 и десятая доля не больше 7");
             firstInput = scan.nextInt();
         }
-        System.out.println(firstInput);
         int x = firstInput / 10;
         int y = firstInput % 10;
+        cords[x][y]=7;
+        System.out.println(Arrays.deepToString(cords).replace("],", "]\n"));
         for (int i = 0; i < cords.length; i++) {
             for (int j = 0; j < cords[i].length; j++) {  //Индуский код
                 if (x > 1 && y > 0) {
