@@ -11,10 +11,11 @@ public class Task1 {
     }
 
     public static int checkOriginality(int[] checkArr) {
-        Arrays.sort(checkArr);
+        int[] workArray = Arrays.copyOf(checkArr,checkArr.length);
+        Arrays.sort(workArray);
         int counter = 1;
-        for (int i = 1; i < checkArr.length; i++, counter++) {
-            if (checkArr[i] == checkArr[i - 1]) {
+        for (int i = 1; i < workArray.length; i++, counter++) {
+            if (workArray[i] == workArray[i - 1]) {
                 counter--;
             }
         }
