@@ -1,7 +1,6 @@
 package ua.matyukhin.modul1;
 
 import java.util.Arrays;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Task2 {
