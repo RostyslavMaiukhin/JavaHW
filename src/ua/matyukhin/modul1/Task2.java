@@ -57,18 +57,15 @@ public class Task2 {
     public static int[] scanInput(Scanner scan) {
         int x = 0;
         int y = 0;
-        int counter = 0;
         String axisX = "abcdefgh";
         String axisY = "12345678";
             String userInput = scan.nextLine().toLowerCase();
             for (int i = 0; i < axisX.length(); i++) {
                 if (axisX.charAt(i) == userInput.charAt(0)) {
                     y = i;
-                    counter++;
                 }
                 if (axisY.charAt(i) == userInput.charAt(1)) {
                     x = i;
-                    counter++;
                 }
             }
         return new int[]{x, y};
