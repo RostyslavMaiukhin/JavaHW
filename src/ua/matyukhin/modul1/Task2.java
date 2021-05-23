@@ -57,17 +57,25 @@ public class Task2 {
     public static int[] scanInput(Scanner scan) {
         int x = 0;
         int y = 0;
+        boolean counterX;
+        boolean counterY;
         String axisX = "abcdefgh";
         String axisY = "12345678";
+        do {
+            counterX = false;
+            counterY = false;
             String userInput = scan.nextLine().toLowerCase();
             for (int i = 0; i < axisX.length(); i++) {
                 if (axisX.charAt(i) == userInput.charAt(0)) {
                     y = i;
+                    counterX = true;
                 }
                 if (axisY.charAt(i) == userInput.charAt(1)) {
                     x = i;
+                    counterY = true;
                 }
             }
+        } while (counterX != counterY);  //Защита от всего что за диапозоном принимаемых значений
         return new int[]{x, y};
     }
 }
