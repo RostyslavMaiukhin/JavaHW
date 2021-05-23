@@ -12,27 +12,19 @@ public class Task2 {
     private static boolean horseAdventure(int[][] cords) {
         int[][] navigationAllow = horseNavMesh(cords); //Заполняем все возможные эллементы куда конь может пойти.
         Scanner scan = new Scanner(System.in);
-        System.out.println("Введите координыты куда конь пойдет двухзначным числом: ");
-        int secondInput = scan.nextInt();
-        while (secondInput % 10 > 7 || secondInput > 78 || secondInput < 0) {
-            System.out.println("Лимит не больше 77 и десятая доля не больше 7"); // маразматичная проверка из-за желания принимать координаты
-            secondInput = scan.nextInt();                                        //одним числом,типа user friendly
-        }
-        int x = secondInput / 10;
-        int y = secondInput % 10;
+        System.out.println("Введите поле куда конь пойдет : ");
+        int[] scanCords = scanInput(scan);
+        int x = scanCords[0];
+        int y = scanCords[1];
         return cords[x][y] == 1;
     }
 
     public static int[][] horseNavMesh(int[][] cords) { //определяет всевозможные ходы коня с заданой точки
         Scanner scan = new Scanner(System.in);
-        System.out.println("Введите координыта коня двухзначным числом: ");
-        int firstInput = scan.nextInt();
-        while (firstInput % 10 > 7 || firstInput > 78 || firstInput < 0) {
-            System.out.println("Лимит не больше 77 и десятая доля не больше 7");
-            firstInput = scan.nextInt();
-        }
-        int x = firstInput / 10;
-        int y = firstInput % 10;
+        System.out.println("Введите поле где конь стоит : ");
+        int[] scanCords = scanInput(scan);
+        int x = scanCords[0];
+        int y = scanCords[1];
         cords[x][y] = 7;  //показывает положение коня на "доске"
         if (x > 1 && y > 0) {           //Индуский код
             cords[x - 2][y - 1] = 1;
@@ -60,6 +52,26 @@ public class Task2 {
         }
         System.out.println(Arrays.deepToString(cords).replace("],", "]\n"));
         return cords;
+    }
+
+    public static int[] scanInput(Scanner scan) {
+        int x = 0;
+        int y = 0;
+        int counter = 0;
+        String axisX = "abcdefgh";
+        String axisY = "12345678";
+            String userInput = scan.nextLine().toLowerCase();
+            for (int i = 0; i < axisX.length(); i++) {
+                if (axisX.charAt(i) == userInput.charAt(0)) {
+                    y = i;
+                    counter++;
+                }
+                if (axisY.charAt(i) == userInput.charAt(1)) {
+                    x = i;
+                    counter++;
+                }
+            }
+        return new int[]{x, y};
     }
 }
 
