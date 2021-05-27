@@ -66,14 +66,15 @@ public class Task2 {
             counterY = false;
             String userInput = scan.nextLine().toLowerCase();
             for (int i = 0; i < axisX.length(); i++) {
-                if (axisX.charAt(i) == userInput.charAt(0)) {
-                    y = i;
-                    counterX = true;
-                }
                 if (axisY.charAt(i) == userInput.charAt(1)) {
                     x = i;
                     counterY = true;
                 }
+                if (axisX.charAt(i) == userInput.charAt(0)) {
+                    y = i;
+                    counterX = true;
+                }
+
             }
         } while (counterX != counterY);  //Защита от всего что за диапозоном принимаемых значений
         return new int[]{x, y};
