@@ -3,11 +3,8 @@ package ua.matyukhin.hw9;
 import java.util.Scanner;
 
 public class Converter extends Chess{
-    String inputCord;
-
-    public Converter(Converter converterMock, String inputCord) {
-        super(converterMock);
-        this.inputCord = inputCord;
+    public Converter(Converter converterMock) {
+        this.converter = converterMock;
     }
 
     public static int[] scanInput(String inputCord) {

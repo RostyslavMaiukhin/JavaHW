@@ -4,12 +4,10 @@ import java.util.Arrays;
 
 public class Chess {
     Converter converter;
-
-    public Chess() {
+    public Chess(Converter converter) {
+        this.converter = converter;
     }
-
-    public Chess(Converter converterMock) {
-        this.converter = converterMock;
+    public Chess() {
     }
 
     public static void main(String[] args) {
