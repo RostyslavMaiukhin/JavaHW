@@ -9,28 +9,27 @@ public class Task1 {
             numbers[i] = (int) (Math.random() * (1 - 100) + 100); //с 0 геометрическое считать скучно
         }
         System.out.println("Исходный массив " + Arrays.toString(numbers));
-        System.out.println("Среднее Арифметическое " + middleArephmetic(numbers));
+        System.out.println("Среднее Арифметическое " + middleArithmetic(numbers));
         System.out.println("Среднее Геометрическое " + middleGeometric(numbers));
     }
 
-    public static int middleArephmetic(int[] numbers) {
-        int[] arephmeticArray = Arrays.copyOf(numbers, numbers.length);
+    public static int middleArithmetic(int[] numbers) {
         int sum = 0;
         int result = 0;
-        for (int j : arephmeticArray) {
+        for (int j : numbers) {
             sum += j;
         }
-        return result = sum / arephmeticArray.length;
+        return result = sum / numbers.length;
     }
 
     public static double middleGeometric(int[] numbers) {
         int geometricArray = numbers.length;
-        double multi = 0.0d;
-        for (int number : numbers) {
-            if (number == 0L) {
-                return 0.0d;
+        double multi = 0;
+        for (int j : numbers) {
+            if (j == 0) {
+                return 0;
             }
-            multi += Math.log(number);
+            multi += Math.log(j);
         }
         return Math.exp(multi / geometricArray);
     }
