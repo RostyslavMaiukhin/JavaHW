@@ -5,9 +5,8 @@ import java.io.*;
 public class Demo {
     public static String read(String path) {
 
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new FileReader(path));
+        try
+            (BufferedReader reader = new BufferedReader(new FileReader(path))){
             StringBuilder stringBuilder = new StringBuilder();
             String currentString;
             while ((currentString = reader.readLine()) != null) {
@@ -16,20 +15,12 @@ public class Demo {
             }
             return stringBuilder.toString();
         } catch (IOException e) {
-            e.printStackTrace();
             return e.getMessage();
-        } finally {
-            if (reader!=null) {
-                try {
-                    reader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
+
     }
 
     public static void main(String[] args) {
-        System.out.println(read("C:\\tes2t.txt"));
+        System.out.println(read("C:\\t3est.txt"));
     }
 }
