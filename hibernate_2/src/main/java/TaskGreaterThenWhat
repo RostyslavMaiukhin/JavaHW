@@ -1,0 +1,34 @@
+#!/bin/bash
+echo -n "Enter length:"
+read x
+mkdir folder
+find -name "*.java" -exec cp {} folder/ \;
+for file in $(find folder/ -name "*.java") ; do
+FILE=$file
+SIZE=${#FILE}
+((xFixer=13+x))
+((SIZEcut=SIZE-5))
+if [[ $SIZE -ge xFixer ]]
+then
+cd folder
+touch temp.txt
+echo "$FILE" | cut -c 8-$SIZEcut>>temp.txt
+cd ..
+fi
+
+if [[ $SIZE -lt xFixer ]]
+then
+cd folder
+touch temp2.txt
+echo "$FILE" | cut -c 8-$SIZEcut>>temp2.txt
+cd ..
+fi
+
+
+done
+mkdir folderForTxt
+cp folder/temp.txt folderForTxt/WordsGreater.txt
+cp folder/temp2.txt folderForTxt/OtherWords.txt
+
+rm -rf folder
+
